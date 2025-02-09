@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Summary</title>
+    <link rel="stylesheet" href="assets/css/styles_summary.css">
+</head>
+<body>
+
+<header>
+    <h1>Quiz Summary</h1>
+</header>
+
+<main class="summary-container">
+    <div class="summary-box">
+        <p><strong>Entrance Exam:</strong> <span id="summary-exam"></span></p>
+        <p><strong>Class:</strong> <span id="summary-class"></span></p>
+        <p><strong>Subject:</strong> <span id="summary-subject"></span></p>
+        <p><strong>Chapter:</strong> <span id="summary-chapter"></span></p>
+        <p><strong>Topic:</strong> <span id="summary-topic"></span></p>
+        <p><strong>Difficulty:</strong> <span id="summary-difficulty"></span></p>
+        <p><strong>Number of Questions:</strong> <span id="summary-questions"></span></p>
+    </div>
+
+    <!-- Checkbox to confirm readiness -->
+    <div class="confirmation">
+        <input type="checkbox" id="confirm" onchange="toggleStartButton()">
+        <label for="confirm">
+            I confirm that: <br>
+            - I have reviewed my selected exam details carefully. <br>
+            - I am in a quiet environment with no distractions. <br>
+            - My internet connection is stable. <br>
+            - I will not use any unauthorized materials or assistance. <br>
+            - I understand that once started, the test cannot be paused. <br>
+            - I am ready to take the test.
+        </label>
+    </div>
+    
+    <button id="start-test-btn" onclick="startTest()">Start Test</button>
+</main>
+
+<script src="assets/js/summary.js"></script>
+</body>
+</html>

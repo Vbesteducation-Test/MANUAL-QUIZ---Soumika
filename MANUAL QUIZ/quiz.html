@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Page</title>
+    <link rel="stylesheet" href="assets/css/quizstyles.css"> <!-- Link to existing CSS -->
+</head>
+<body>
+
+    <!-- Timer at the Top -->
+    <div class="quiz-header">
+        <h2>Time Left: <span id="timer">00:00</span></h2>
+    </div>
+
+    <div class="quiz-container">
+        <!-- Left Navigation Pane -->
+        <div class="navigation-pane">
+            <h3>Questions</h3>
+            <div id="question-nav"></div> <!-- Question numbers dynamically generated -->
+        </div>
+
+        <!-- Quiz Content -->
+        <div class="quiz-content">
+            <h3 id="question-text">Question goes here...</h3>
+            <div id="options-container"></div>
+
+            <!-- Navigation Buttons -->
+            <div class="quiz-buttons">
+                <button id="prev-btn" onclick="prevQuestion()" style="display: none;">Prev</button>
+                <button id="next-btn" onclick="nextQuestion()">Next</button>
+                <button id="submit-btn" onclick="submitQuiz()" style="display: none;">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/quiz-script.js"></script> <!-- Quiz JavaScript File -->
+</body>
+</html>

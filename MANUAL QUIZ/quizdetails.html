@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Selection</title>
+    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Link to existing CSS -->
+</head>
+<body>
+
+<header>
+    <h1>Select Your Quiz Preferences</h1>
+</header>
+
+<main class="quiz-selection-container">
+    <form id="quiz-form">
+        
+        <!-- 1. Select Entrance Exam -->
+        <label for="exam">Select Entrance Exam:</label>
+        <select id="exam" name="exam">
+            <option value="" selected disabled>Select Exam</option>
+            <option value="EAMCET">EAMCET</option>
+            <option value="ECET">ECET</option>
+            <option value="JEE Mains">JEE Mains</option>
+            <option value="JEE Advance">JEE Advance</option>
+            <option value="GATE">GATE</option>
+        </select>
+
+        <!-- 2. Select Class -->
+        <!-- Select Class -->
+<label for="class">Select Class:</label>
+<select id="class" name="class" onchange="updateSubjects()">
+    <option value="" selected disabled>Select Class</option>
+    <option value="11">Class 11</option>
+    <option value="12">Class 12</option>
+</select>
+
+<!-- Select Subject (Empty by Default) -->
+<label for="subject">Select Subject:</label>
+<select id="subject" name="subject" onchange="updateChapters()">
+    <option value="" selected disabled>Select Subject</option>
+</select>
+
+<!-- Select Chapter (Empty by Default) -->
+<label for="chapter">Select Chapter:</label>
+<select id="chapter" name="chapter" onchange="updateTopics()">
+    <option value="" selected disabled>Select Chapter</option>
+</select>
+
+<!-- Select Topic (Empty by Default) -->
+<label for="topic">Select Topic:</label>
+<select id="topic" name="topic">
+    <option value="" selected disabled>Select Topic</option>
+</select>
+
+<!-- Select Difficulty (Empty by Default) -->
+<label for="difficulty">Select Difficulty:</label>
+<select id="difficulty" name="difficulty" onchange="calculateTime()">
+    <option value="" selected disabled>Select Difficulty</option>
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="hard">Hard</option>
+</select>
+
+<!-- Number of Questions (Left-Aligned) -->
+<p class="fixed-text">Number of Questions: <strong>25 (Fixed)</strong></p>
+<p class="fixed-text">Total Time: <strong id="quiz-time">—</strong></p>
+
+
+
+        <!-- Submit Button -->
+        <button type="submit">Start Quiz</button>
+
+    </form>
+</main>
+
+<script src="assets/js/script.js"></script> <!-- JavaScript file -->
+</body>
+</html>

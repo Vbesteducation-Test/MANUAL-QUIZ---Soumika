@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Dark mode */
+    color: #e0f7fa; /* Light cyan text */
+    text-align: center;
+}
+
+/* Timer */
+.quiz-header {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #1976D2;
+    padding: 10px;
+    background-color: #263238;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Quiz Layout */
+.quiz-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Navigation Pane */
+.navigation-pane {
+    width: 20%;
+    padding: 15px;
+    background-color: #1E1E1E; /* Darker modern shade */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+#question-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.question-number {
+    width: 40px; /* Increased size */
+    height: 40px;
+    margin: 5px;
+    background-color: #37474F; /* Darker shade for modern look */
+    color: #e0f7fa;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem; /* Adjusted text size */
+    line-height: 1;
+}
+
+.question-number:hover {
+    background-color: #1976D2;
+    transform: scale(1.1);
+}
+
+.question-number.active {
+    background-color: #1976D2;
+    color: white;
+    transform: scale(1.15);
+}
+
+/* Quiz Content */
+.quiz-content {
+    width: 75%;
+    padding: 25px;
+    background-color: #263238; /* Match quizdetails page */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+/* Styled Options (Replacing Radio Buttons) */
+#options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Modern Option Buttons */
+.option-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #BBDEFB; /* Light blue text */
+    background: linear-gradient(145deg, #1C1C1C, #222222); /* Neumorphic dark effect */
+    border: 2px solid #37474F;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: block;
+    box-shadow: 3px 3px 6px #151515, -3px -3px 6px #333333; /* Neumorphism */
+}
+
+/* Hover Effect */
+.option-btn:hover {
+    background: #1565C0; /* Dark blue */
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Selected Effect */
+.option-btn.selected {
+    background: #1976D2; /* Vibrant blue */
+    color: white;
+    border: 2px solid #0D47A1;
+    transform: scale(1.1);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+
+.question-number.answered {
+    background-color: #4CAF50 !important; /* Green to indicate answered */
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Navigation Buttons */
+.quiz-buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px;
+    margin: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#prev-btn, #next-btn {
+    background-color: #1976D2;
+    color: white;
+}
+
+#prev-btn:hover, #next-btn:hover {
+    background-color: #1565C0;
+    transform: scale(1.05);
+}
+
+#submit-btn {
+    background-color: #FF3D00;
+    color: white;
+}
+
+#submit-btn:hover {
+    background-color: #D32F2F;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quiz-container {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .navigation-pane {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .quiz-content {
+        width: 100%;
+    }
+
+    .option-btn {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
